@@ -8,26 +8,28 @@
     "net8.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Rudransh\\.nuget\\packages\\": {}
+    "C:\\Users\\DELL\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rudransh\\Documents\\Library-Mangement-System-U\\LMS\\LMS.csproj",
+      "projectUniqueName": "C:\\Users\\DELL\\source\\repos\\Library-Mangement-System-U\\LMS\\LMS.csproj",
       "projectName": "LMS",
-      "projectPath": "C:\\Users\\Rudransh\\Documents\\Library-Mangement-System-U\\LMS\\LMS.csproj",
-      "packagesPath": "C:\\Users\\Rudransh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rudransh\\Documents\\Library-Mangement-System-U\\LMS\\obj\\",
+      "projectPath": "C:\\Users\\DELL\\source\\repos\\Library-Mangement-System-U\\LMS\\LMS.csproj",
+      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\DELL\\source\\repos\\Library-Mangement-System-U\\LMS\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Rudransh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0-windows"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0-windows7.0": {
