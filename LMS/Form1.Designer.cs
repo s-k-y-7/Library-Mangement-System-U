@@ -28,12 +28,94 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            button1 = new Button();
+            label1 = new Label();
+            label2 = new Label();
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
+            label3 = new Label();
+            SuspendLayout();
+            // 
+            // button1
+            // 
+            button1.Location = new Point(188, 486);
+            button1.Name = "button1";
+            button1.Size = new Size(152, 75);
+            button1.TabIndex = 0;
+            button1.Text = "Login";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial", 14F);
+            label1.Location = new Point(58, 238);
+            label1.Name = "label1";
+            label1.Size = new Size(122, 27);
+            label1.TabIndex = 1;
+            label1.Text = "Username";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Arial", 14F);
+            label2.Location = new Point(58, 331);
+            label2.Name = "label2";
+            label2.Size = new Size(117, 27);
+            label2.TabIndex = 2;
+            label2.Text = "Password";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(258, 242);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(238, 25);
+            textBox1.TabIndex = 3;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(258, 335);
+            textBox2.Name = "textBox2";
+            textBox2.PasswordChar = '*';
+            textBox2.Size = new Size(238, 25);
+            textBox2.TabIndex = 4;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Arial", 25F);
+            label3.Location = new Point(188, 74);
+            label3.Name = "label3";
+            label3.Size = new Size(231, 47);
+            label3.TabIndex = 5;
+            label3.Text = "Login Page";
+            label3.Click += label3_Click;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(8F, 17F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(572, 655);
+            Controls.Add(label3);
+            Controls.Add(textBox2);
+            Controls.Add(textBox1);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(button1);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            Name = "Form1";
+            Text = "Library Management System";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Button button1;
+        private Label label1;
+        private Label label2;
+        private TextBox textBox1;
+        private TextBox textBox2;
+        private Label label3;
     }
 }
