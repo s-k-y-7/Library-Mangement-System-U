@@ -33,3 +33,4 @@ C:\Users\DELL\Source\Repos\Library-Mangement-System-U\LMS\obj\Debug\net8.0-windo
 C:\Users\DELL\Source\Repos\Library-Mangement-System-U\LMS\obj\Debug\net8.0-windows\LMS.genruntimeconfig.cache
 C:\Users\DELL\Source\Repos\Library-Mangement-System-U\LMS\obj\Debug\net8.0-windows\ref\LMS.dll
 C:\Users\DELL\source\repos\Library-Mangement-System-U\LMS\obj\Debug\net8.0-windows\LMS.Properties.Resources.resources
+C:\Users\Rudransh\Documents\Library-Mangement-System-U\LMS\obj\Debug\net8.0-windows\LMS.Properties.Resources.resources

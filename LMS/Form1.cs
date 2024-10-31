@@ -36,5 +36,23 @@ namespace LMS
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            String Uname = "1", Upass = "1", name, pass;
+            name = textBox1.Text;
+            pass = textBox2.Text;
+
+            if (name.Equals(Uname) && pass.Equals(Upass))
+            {
+                // login
+                label4.Enabled = false;
+                MessageBox.Show("Logged in Successfully");
+            }
+            else
+            {
+                label4.Enabled = true;
+            }
+        }
     }
 }
