@@ -1,2 +1,40 @@
-.vs
-LMS/.vs
+# Ignore the Visual Studio folder and user-specific files
+.vs/
+*.user
+*.suo
+
+# Ignore build output directories
+LMS/bin/
+LMS/obj/
+
+# Ignore specific Debug and Release build outputs
+LMS/obj/Debug/
+LMS/obj/Release/
+
+# Ignore DLLs and other binary outputs
+*.dll
+*.exe
+*.pdb
+
+# Ignore MSBuild specific files
+*.BuildWithSkipAnalyzers
+*.CoreCompileInputs.cache
+*.FileListAbsolute.txt
+*.GenerateResource.cache
+*.genruntimeconfig.cache
+*.AssemblyInfoInputs.cache
+*.GeneratedMSBuildEditorConfig.editorconfig
+*.assets.cache
+*.AssemblyInfo.cs
+
+# Ignore temporary or cache files
+*.cache
+*.nuget.cache
+*.dgspec.json
+project.nuget.cache
+project.assets.json
+
+# Ignore debug/release runtime configuration files
+*.runtimeconfig.json
+ref/
+refint/
