@@ -1,3 +1,13 @@
+using System;
+using System.Data.SqlClient; //this will fetch all the necessary programs and packages for your project along with the source code
+using System.Collections.Generic;
+using System.Data;
+using System.ComponentModel;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 namespace LMS
 {
     public partial class Form1 : Form
@@ -6,6 +16,37 @@ namespace LMS
         {
             InitializeComponent();
         }
+
+        SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Asus\\source\\repos\\Library-Mangement-System-U\\LMS\\Database.mdf;Integrated Security=True");
+        SqlCommand cmd;
+        SqlDataReader dr;
+
+        private String getUserName()
+        {
+            con.Open();
+            String syntax = "SELECT Value FROM systemTable where Property = 'UserName'";
+            cmd = new SqlCommand(syntax, con);
+            dr = cmd.ExecuteReader();
+            dr.Read();
+            String temp = dr[0].ToString();
+            dr.Close();
+            con.Close();
+            return temp;
+        }
+
+        private String getPassword()
+        {
+            con.Open();
+            String syntax = "SELECT Value FROM systemTable where Property = 'Password'";
+            cmd = new SqlCommand(syntax, con);
+            dr = cmd.ExecuteReader();
+            dr.Read();
+            String temp = dr[0].ToString();
+            dr.Close();
+            con.Close();
+            return temp;
+        }
+
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -39,7 +80,7 @@ namespace LMS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            String Uname = "1", Upass = "1", name, pass;
+            String Uname = getUserName(), Upass = getPassword(), name, pass;
             name = textBox1.Text;
             pass = textBox2.Text;
 
