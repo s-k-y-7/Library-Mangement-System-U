@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 namespace LMS
 {
     public partial class Form1 : Form
@@ -15,9 +16,10 @@ namespace LMS
         public Form1()
         {
             InitializeComponent();
+            string dbConnectionString = Environment.GetEnvironmentVariable("DB_CONNECTION_STRING") ?? "";
+            con = new SqlConnection(dbConnectionString);
         }
-
-        SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Asus\\source\\repos\\Library-Mangement-System-U\\LMS\\Database.mdf;Integrated Security=True");
+        SqlConnection con;
         SqlCommand cmd;
         SqlDataReader dr;
 
@@ -81,9 +83,8 @@ namespace LMS
         private void button1_Click(object sender, EventArgs e)
         {
             String Uname = getUserName(), Upass = getPassword(), name, pass;
-            name = textBox1.Text;
-            pass = textBox2.Text;
-
+            name = textBox2.Text;
+            pass = textBox1.Text;
             if (name.Equals(Uname) && pass.Equals(Upass))
             {
                 // login
@@ -93,6 +94,7 @@ namespace LMS
             else
             {
                 label4.Enabled = true;
+                MessageBox.Show("Couldnt Login");
             }
         }
     }

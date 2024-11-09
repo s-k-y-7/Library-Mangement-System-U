@@ -3,6 +3,9 @@
 *.user
 *.suo
 
+# env
+LMS/Properties/launchSettings.json
+
 # Ignore build output directories
 LMS/bin/
 LMS/obj/
