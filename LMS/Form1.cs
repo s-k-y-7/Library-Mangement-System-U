@@ -89,7 +89,10 @@ namespace LMS
             {
                 // login
                 label4.Enabled = false;
-                MessageBox.Show("Logged in Successfully");
+                AppBody obj = new AppBody();
+                this.Hide();
+                obj.Show();
+                    
             }
             else
             {
