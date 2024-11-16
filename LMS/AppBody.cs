@@ -25,6 +25,9 @@ namespace LMS
         public AppBody()
         {
             InitializeComponent();
+            //initializing the sliding panel
+            isSlidingPanelExpanded = true;
+            expandSlidingPanelGUI();
         }
 
         private void AppBody_Load(object sender, EventArgs e)
@@ -71,6 +74,36 @@ namespace LMS
             }
         }
 
+        public void expandSlidingPanelGUI()
+        {
+            BooksTabButton.Text = "BOOKS";
+            BorrowersTabButton.Text = "BORROWERS";
+            TransactionTabButton.Text = "TRANSACTIONS";
+            SettingsTabButton.Text = "SETTINGS";
+            AboutTabButton.Text = "ABOUT";
+            SlidingPanel_ToggleButton.Image = Properties.Resources.llarrow;
+            BooksTabButton.Image = null;
+            BorrowersTabButton.Image = null;
+            TransactionTabButton.Image = null;
+            SettingsTabButton.Image = null;
+            AboutTabButton.Image = null;
+        }
+
+        public void retractSlidingPanelGUI()
+        {
+            BooksTabButton.Text = "";
+            BorrowersTabButton.Text = "";
+            TransactionTabButton.Text = "";
+            SettingsTabButton.Text = "";
+            AboutTabButton.Text = "";
+            SlidingPanel_ToggleButton.Image = Properties.Resources.rrArrow;
+            BooksTabButton.Image = Properties.Resources.Books;
+            BorrowersTabButton.Image = Properties.Resources.Borrowers;
+            TransactionTabButton.Image = Properties.Resources.Transactions;
+            SettingsTabButton.Image = Properties.Resources.Settings;
+            AboutTabButton.Image =Properties.Resources.About;
+        }
+
         // sliding panel code
 
         bool isSlidingPanelExpanded;
@@ -78,20 +111,21 @@ namespace LMS
         const int MinSliderWidth = 100;
         private void SlidingPanel_ToggleButton_Click(object sender, EventArgs e)
         {
-            if(isSlidingPanelExpanded)
+            if (isSlidingPanelExpanded)
             {
                 // retract panel
+                retractSlidingPanelGUI();
             }
             SlidingPanel_Timer.Start();
         }
 
         private void Sliding_Panel_Timer_Tick(object sender, EventArgs e)
         {
-            if(isSlidingPanelExpanded)
+            if (isSlidingPanelExpanded)
             {
                 // retract panel
                 SlidingPanel.Width -= 30;
-                if(SlidingPanel.Width <= MinSliderWidth)
+                if (SlidingPanel.Width <= MinSliderWidth)
                 {
                     isSlidingPanelExpanded = false;
                     SlidingPanel_Timer.Stop();
@@ -106,9 +140,15 @@ namespace LMS
                 {
                     isSlidingPanelExpanded = true;
                     SlidingPanel_Timer.Stop();
+                    expandSlidingPanelGUI();
                     this.Refresh();
                 }
             }
+        }
+
+        private void BooksTabButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
