@@ -34,21 +34,20 @@
             // About
             // 
             About.AutoSize = true;
-            About.Location = new Point(530, 245);
-            About.Margin = new Padding(4, 0, 4, 0);
+            About.Location = new Point(326, 211);
             About.Name = "About";
-            About.Size = new Size(62, 25);
+            About.Size = new Size(82, 15);
             About.TabIndex = 0;
-            About.Text = "About";
+            About.Text = "DBMS Project";
             // 
             // About_UserControl
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(About);
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "About_UserControl";
-            Size = new Size(1112, 876);
+            Size = new Size(778, 526);
             Load += About_UserControl_Load;
             ResumeLayout(false);
             PerformLayout();
