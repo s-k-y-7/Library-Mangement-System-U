@@ -43,12 +43,14 @@
             BooksTabButton = new Button();
             SlidingPanel_ToggleButton = new Button();
             SlidingPanel_Timer = new System.Windows.Forms.Timer(components);
+            ContentPannel = new Panel();
             TitleBar1.SuspendLayout();
             SlidingPanel.SuspendLayout();
             SuspendLayout();
             // 
             // Log_in_timer
             // 
+            Log_in_timer.Interval = 50;
             Log_in_timer.Tick += Log_in_timer_Tick;
             // 
             // TitleBar1
@@ -59,8 +61,9 @@
             TitleBar1.Controls.Add(closeButton);
             TitleBar1.Dock = DockStyle.Top;
             TitleBar1.Location = new Point(0, 0);
+            TitleBar1.Margin = new Padding(3, 4, 3, 4);
             TitleBar1.Name = "TitleBar1";
-            TitleBar1.Size = new Size(1078, 35);
+            TitleBar1.Size = new Size(1232, 47);
             TitleBar1.TabIndex = 0;
             TitleBar1.MouseDown += TitleBar1_MouseDown;
             // 
@@ -70,9 +73,10 @@
             LogOffButton.BackgroundImageLayout = ImageLayout.Stretch;
             LogOffButton.FlatStyle = FlatStyle.Flat;
             LogOffButton.ForeColor = Color.DeepSkyBlue;
-            LogOffButton.Location = new Point(955, 0);
+            LogOffButton.Location = new Point(1091, 0);
+            LogOffButton.Margin = new Padding(3, 4, 3, 4);
             LogOffButton.Name = "LogOffButton";
-            LogOffButton.Size = new Size(36, 35);
+            LogOffButton.Size = new Size(41, 47);
             LogOffButton.TabIndex = 3;
             LogOffButton.UseVisualStyleBackColor = true;
             LogOffButton.Click += LogOffButton_Click;
@@ -83,9 +87,10 @@
             MinimizeButton.BackgroundImageLayout = ImageLayout.Zoom;
             MinimizeButton.FlatStyle = FlatStyle.Flat;
             MinimizeButton.ForeColor = Color.DeepSkyBlue;
-            MinimizeButton.Location = new Point(997, 0);
+            MinimizeButton.Location = new Point(1139, 0);
+            MinimizeButton.Margin = new Padding(3, 4, 3, 4);
             MinimizeButton.Name = "MinimizeButton";
-            MinimizeButton.Size = new Size(36, 35);
+            MinimizeButton.Size = new Size(41, 47);
             MinimizeButton.TabIndex = 2;
             MinimizeButton.UseVisualStyleBackColor = true;
             MinimizeButton.Click += MinimizeButton_Click;
@@ -96,9 +101,10 @@
             closeButton.BackgroundImageLayout = ImageLayout.Zoom;
             closeButton.FlatStyle = FlatStyle.Flat;
             closeButton.ForeColor = Color.DeepSkyBlue;
-            closeButton.Location = new Point(1039, 0);
+            closeButton.Location = new Point(1187, 0);
+            closeButton.Margin = new Padding(3, 4, 3, 4);
             closeButton.Name = "closeButton";
-            closeButton.Size = new Size(36, 35);
+            closeButton.Size = new Size(41, 47);
             closeButton.TabIndex = 1;
             closeButton.UseVisualStyleBackColor = true;
             closeButton.Click += closeButton_Click;
@@ -115,9 +121,10 @@
             SlidingPanel.Controls.Add(BooksTabButton);
             SlidingPanel.Controls.Add(SlidingPanel_ToggleButton);
             SlidingPanel.Dock = DockStyle.Left;
-            SlidingPanel.Location = new Point(0, 35);
+            SlidingPanel.Location = new Point(0, 47);
+            SlidingPanel.Margin = new Padding(3, 4, 3, 4);
             SlidingPanel.Name = "SlidingPanel";
-            SlidingPanel.Size = new Size(300, 526);
+            SlidingPanel.Size = new Size(343, 701);
             SlidingPanel.TabIndex = 1;
             // 
             // AboutTabButton
@@ -127,9 +134,10 @@
             AboutTabButton.Font = new Font("Arial", 20.25F);
             AboutTabButton.Image = Properties.Resources.About;
             AboutTabButton.ImageAlign = ContentAlignment.MiddleLeft;
-            AboutTabButton.Location = new Point(-1, 355);
+            AboutTabButton.Location = new Point(-1, 473);
+            AboutTabButton.Margin = new Padding(3, 4, 3, 4);
             AboutTabButton.Name = "AboutTabButton";
-            AboutTabButton.Size = new Size(300, 71);
+            AboutTabButton.Size = new Size(343, 95);
             AboutTabButton.TabIndex = 7;
             AboutTabButton.Text = "ABOUT";
             AboutTabButton.UseVisualStyleBackColor = false;
@@ -141,9 +149,10 @@
             SettingsTabButton.Font = new Font("Arial", 20.25F);
             SettingsTabButton.Image = Properties.Resources.Settings;
             SettingsTabButton.ImageAlign = ContentAlignment.MiddleLeft;
-            SettingsTabButton.Location = new Point(-1, 284);
+            SettingsTabButton.Location = new Point(-1, 379);
+            SettingsTabButton.Margin = new Padding(3, 4, 3, 4);
             SettingsTabButton.Name = "SettingsTabButton";
-            SettingsTabButton.Size = new Size(300, 71);
+            SettingsTabButton.Size = new Size(343, 95);
             SettingsTabButton.TabIndex = 6;
             SettingsTabButton.Text = "SETTINGS";
             SettingsTabButton.UseVisualStyleBackColor = false;
@@ -155,9 +164,10 @@
             TransactionTabButton.Font = new Font("Arial", 20.25F);
             TransactionTabButton.Image = Properties.Resources.Transactions;
             TransactionTabButton.ImageAlign = ContentAlignment.MiddleLeft;
-            TransactionTabButton.Location = new Point(-1, 213);
+            TransactionTabButton.Location = new Point(-1, 284);
+            TransactionTabButton.Margin = new Padding(3, 4, 3, 4);
             TransactionTabButton.Name = "TransactionTabButton";
-            TransactionTabButton.Size = new Size(300, 71);
+            TransactionTabButton.Size = new Size(343, 95);
             TransactionTabButton.TabIndex = 5;
             TransactionTabButton.Text = "TRANSACTION";
             TransactionTabButton.UseVisualStyleBackColor = false;
@@ -169,9 +179,10 @@
             BorrowersTabButton.Font = new Font("Arial", 20.25F);
             BorrowersTabButton.Image = Properties.Resources.Borrowers;
             BorrowersTabButton.ImageAlign = ContentAlignment.MiddleLeft;
-            BorrowersTabButton.Location = new Point(-1, 142);
+            BorrowersTabButton.Location = new Point(-1, 189);
+            BorrowersTabButton.Margin = new Padding(3, 4, 3, 4);
             BorrowersTabButton.Name = "BorrowersTabButton";
-            BorrowersTabButton.Size = new Size(300, 71);
+            BorrowersTabButton.Size = new Size(343, 95);
             BorrowersTabButton.TabIndex = 4;
             BorrowersTabButton.Text = "BORROWERS";
             BorrowersTabButton.UseVisualStyleBackColor = false;
@@ -183,9 +194,10 @@
             BooksTabButton.Font = new Font("Arial", 20.25F);
             BooksTabButton.Image = Properties.Resources.Books;
             BooksTabButton.ImageAlign = ContentAlignment.MiddleLeft;
-            BooksTabButton.Location = new Point(-1, 71);
+            BooksTabButton.Location = new Point(-1, 95);
+            BooksTabButton.Margin = new Padding(3, 4, 3, 4);
             BooksTabButton.Name = "BooksTabButton";
-            BooksTabButton.Size = new Size(300, 71);
+            BooksTabButton.Size = new Size(343, 95);
             BooksTabButton.TabIndex = 3;
             BooksTabButton.Text = "BOOKS";
             BooksTabButton.UseVisualStyleBackColor = false;
@@ -198,8 +210,9 @@
             SlidingPanel_ToggleButton.Image = Properties.Resources.llarrow;
             SlidingPanel_ToggleButton.ImageAlign = ContentAlignment.MiddleLeft;
             SlidingPanel_ToggleButton.Location = new Point(-1, 0);
+            SlidingPanel_ToggleButton.Margin = new Padding(3, 4, 3, 4);
             SlidingPanel_ToggleButton.Name = "SlidingPanel_ToggleButton";
-            SlidingPanel_ToggleButton.Size = new Size(300, 71);
+            SlidingPanel_ToggleButton.Size = new Size(343, 95);
             SlidingPanel_ToggleButton.TabIndex = 2;
             SlidingPanel_ToggleButton.UseVisualStyleBackColor = false;
             SlidingPanel_ToggleButton.Click += SlidingPanel_ToggleButton_Click;
@@ -208,15 +221,23 @@
             // 
             SlidingPanel_Timer.Tick += Sliding_Panel_Timer_Tick;
             // 
+            // ContentPannel
+            // 
+            ContentPannel.Dock = DockStyle.Right;
+            ContentPannel.Location = new Point(342, 47);
+            ContentPannel.Name = "ContentPannel";
+            ContentPannel.Size = new Size(890, 701);
+            ContentPannel.TabIndex = 2;
+            // 
             // AppBody
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1078, 561);
+            ClientSize = new Size(1232, 748);
+            Controls.Add(ContentPannel);
             Controls.Add(SlidingPanel);
             Controls.Add(TitleBar1);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 2, 3, 2);
             Name = "AppBody";
             Text = "Form2";
             Load += AppBody_Load;
@@ -240,5 +261,6 @@
         private Button TransactionTabButton;
         private Button BorrowersTabButton;
         private Button BooksTabButton;
+        private Panel ContentPannel;
     }
 }

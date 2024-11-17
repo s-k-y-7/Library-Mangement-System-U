@@ -108,7 +108,7 @@ namespace LMS
 
         bool isSlidingPanelExpanded;
         const int MaxSliderWidth = 300;
-        const int MinSliderWidth = 100;
+        const int MinSliderWidth = 110;
         private void SlidingPanel_ToggleButton_Click(object sender, EventArgs e)
         {
             if (isSlidingPanelExpanded)
@@ -146,8 +146,71 @@ namespace LMS
             }
         }
 
+        private void BorrowersTabButton_Click(object sender, EventArgs e)
+        {
+            if (! ContentPannel.Controls.Contains(Borrowers_UserControl.Instance))
+            {
+                ContentPannel.Controls.Add(Borrowers_UserControl.Instance);
+                Borrowers_UserControl.Instance.Dock = DockStyle.Fill;
+                Borrowers_UserControl.Instance.BringToFront();
+            }
+            else
+            {
+                Borrowers_UserControl.Instance.BringToFront();
+            }
+        }
+        private void SettingsTabButton_Click(object sender, EventArgs e)
+        {
+            if (! ContentPannel.Controls.Contains(Settings_UserControl.Instance))
+            {
+                ContentPannel.Controls.Add(Settings_UserControl.Instance);
+                Settings_UserControl.Instance.Dock = DockStyle.Fill;
+                Settings_UserControl.Instance.BringToFront();
+            }
+            else
+            {
+                Settings_UserControl.Instance.BringToFront();
+            }
+        }
+        private void AboutTabButton_Click(object sender, EventArgs e)
+        {
+            if (! ContentPannel.Controls.Contains(About_UserControl.Instance))
+            {
+                ContentPannel.Controls.Add(About_UserControl.Instance);
+                About_UserControl.Instance.Dock = DockStyle.Fill;
+                About_UserControl.Instance.BringToFront();
+            }
+            else
+            {
+                About_UserControl.Instance.BringToFront();
+            }
+        }
         private void BooksTabButton_Click(object sender, EventArgs e)
         {
+            if(! ContentPannel.Controls.Contains(Books_UserControl.Instance))
+            {
+                ContentPannel.Controls.Add(Books_UserControl.Instance);
+                Books_UserControl.Instance.Dock = DockStyle.Fill;
+                Books_UserControl.Instance.BringToFront();
+            }
+            else
+            {
+                Books_UserControl.Instance.BringToFront();
+            }
+
+        }
+        private void TransactionsTabButton_Click(object sender, EventArgs e)
+        {
+            if (!ContentPannel.Controls.Contains(Transactions_UserControl.Instance))
+            {
+                ContentPannel.Controls.Add(Transactions_UserControl.Instance);
+                Transactions_UserControl.Instance.Dock = DockStyle.Fill;
+                Transactions_UserControl.Instance.BringToFront();
+            }
+            else
+            {
+                Transactions_UserControl.Instance.BringToFront();
+            }
 
         }
     }
