@@ -174,16 +174,17 @@ namespace LMS
         }
         private void AboutTabButton_Click(object sender, EventArgs e)
         {
-            if (! ContentPannel.Controls.Contains(About_UserControl.Instance))
-            {
-                ContentPannel.Controls.Add(About_UserControl.Instance);
-                About_UserControl.Instance.Dock = DockStyle.Fill;
-                About_UserControl.Instance.BringToFront();
-            }
-            else
-            {
-                About_UserControl.Instance.BringToFront();
-            }
+                if (!ContentPannel.Controls.Contains(About_UserControl.Instance))
+                {
+                    ContentPannel.Controls.Add(About_UserControl.Instance);
+                    About_UserControl.Instance.Dock = DockStyle.Fill;
+                    About_UserControl.Instance.BringToFront();
+                }
+                else
+                {
+                    About_UserControl.Instance.BringToFront();
+                }
+           
         }
         private void BooksTabButton_Click(object sender, EventArgs e)
         {

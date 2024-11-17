@@ -34,19 +34,22 @@
             // About
             // 
             About.AutoSize = true;
-            About.Location = new Point(424, 196);
+            About.Location = new Point(530, 245);
+            About.Margin = new Padding(4, 0, 4, 0);
             About.Name = "About";
-            About.Size = new Size(50, 20);
+            About.Size = new Size(62, 25);
             About.TabIndex = 0;
             About.Text = "About";
             // 
             // About_UserControl
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(About);
+            Margin = new Padding(4, 4, 4, 4);
             Name = "About_UserControl";
-            Size = new Size(890, 701);
+            Size = new Size(1112, 876);
+            Load += About_UserControl_Load;
             ResumeLayout(false);
             PerformLayout();
         }

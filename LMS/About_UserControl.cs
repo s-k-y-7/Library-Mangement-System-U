@@ -29,5 +29,10 @@ namespace LMS
         {
             InitializeComponent();
         }
+
+        private void About_UserControl_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
