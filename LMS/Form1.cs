@@ -92,13 +92,18 @@ namespace LMS
                 AppBody obj = new AppBody();
                 this.Hide();
                 obj.Show();
-                    
+
             }
             else
             {
                 label4.Enabled = true;
                 MessageBox.Show("Couldnt Login");
             }
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

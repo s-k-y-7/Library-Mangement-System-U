@@ -42,9 +42,9 @@
             // 
             button1.BackColor = Color.White;
             button1.ForeColor = Color.Black;
-            button1.Location = new Point(184, 498);
+            button1.Location = new Point(161, 439);
             button1.Name = "button1";
-            button1.Size = new Size(167, 25);
+            button1.Size = new Size(146, 22);
             button1.TabIndex = 0;
             button1.Text = "LOG IN";
             button1.UseVisualStyleBackColor = false;
@@ -56,9 +56,9 @@
             label1.BackColor = Color.FromArgb(0, 131, 170);
             label1.Font = new Font("Times New Roman", 10F);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(184, 366);
+            label1.Location = new Point(161, 323);
             label1.Name = "label1";
-            label1.Size = new Size(78, 19);
+            label1.Size = new Size(63, 16);
             label1.TabIndex = 1;
             label1.Text = "Username";
             label1.Click += label1_Click;
@@ -69,9 +69,9 @@
             label2.BackColor = Color.FromArgb(0, 131, 170);
             label2.Font = new Font("Times New Roman", 10F);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(184, 422);
+            label2.Location = new Point(161, 372);
             label2.Name = "label2";
-            label2.Size = new Size(74, 19);
+            label2.Size = new Size(63, 16);
             label2.TabIndex = 2;
             label2.Text = "Password";
             label2.Click += label2_Click;
@@ -81,9 +81,9 @@
             label3.AutoSize = true;
             label3.BackColor = Color.White;
             label3.Font = new Font("Arial", 20F);
-            label3.Location = new Point(40, 60);
+            label3.Location = new Point(35, 53);
             label3.Name = "label3";
-            label3.Size = new Size(440, 39);
+            label3.Size = new Size(362, 32);
             label3.TabIndex = 5;
             label3.Text = "Library Management System";
             label3.Click += label3_Click;
@@ -92,10 +92,10 @@
             // 
             textBox1.BackColor = Color.LightBlue;
             textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Location = new Point(184, 441);
+            textBox1.Location = new Point(161, 389);
             textBox1.Name = "textBox1";
             textBox1.PasswordChar = '*';
-            textBox1.Size = new Size(170, 18);
+            textBox1.Size = new Size(149, 14);
             textBox1.TabIndex = 8;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
@@ -103,10 +103,11 @@
             // 
             textBox2.BackColor = Color.LightBlue;
             textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Location = new Point(184, 385);
+            textBox2.Location = new Point(161, 340);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(170, 18);
+            textBox2.Size = new Size(149, 14);
             textBox2.TabIndex = 9;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // label4
             // 
@@ -114,18 +115,18 @@
             label4.BackColor = Color.Transparent;
             label4.Enabled = false;
             label4.Font = new Font("Arial", 16F);
-            label4.Location = new Point(84, 550);
+            label4.Location = new Point(74, 485);
             label4.Name = "label4";
-            label4.Size = new Size(365, 32);
+            label4.Size = new Size(288, 25);
             label4.TabIndex = 10;
             label4.Text = "Login Credentials Are Wrong";
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 17F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(514, 606);
+            ClientSize = new Size(450, 535);
             Controls.Add(label4);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
