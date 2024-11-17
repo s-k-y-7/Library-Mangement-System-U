@@ -111,12 +111,87 @@ namespace LMS
 
         private void searchbooks_button_Click(object sender, EventArgs e)
         {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("SearchBook_SP", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@accNo", bookId_textbox.Text);
 
+                SqlDataAdapter DA = new SqlDataAdapter(cmd);
+                DataSet DS = new DataSet();
+                DA.Fill(DS);
+
+                con.Open();
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception e1)
+                {
+                    MessageBox.Show(e1.Message);
+                }
+                finally
+                {
+                    con.Close();
+                }
+
+                dataGridView1.DataSource = DS.Tables[0];
+                this.dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+                this.dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                this.dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                this.dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                this.dataGridView1.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                this.dataGridView1.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void delete_button_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("BooksDelete_SP", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@accNo", accno_textBox.Text);
+
+                con.Open();
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("           <<<INVALID SQL OPERATION>>>: \n" + ex);
+                }
+                con.Close();
+
+                refresh_DataGridView();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex);
+            }
+        }
+
+        private void clear_button_Click(object sender, EventArgs e)
+        {
+            bookId_textbox.Text = "";
+            accno_textBox.Text = "";
+            name_textbox.Text = "";
+            publisher_textbox.Text = "";
+            isbn_textbox.Text = "";
+            author_textbox.Text = "";
+            departmentno_textBox.Text = "";
         }
     }
 }
