@@ -39,11 +39,11 @@
             AboutTabButton = new Button();
             SettingsTabButton = new Button();
             TransactionTabButton = new Button();
-            BorrowersTabButton = new Button();
             BooksTabButton = new Button();
             SlidingPanel_ToggleButton = new Button();
             SlidingPanel_Timer = new System.Windows.Forms.Timer(components);
             ContentPannel = new Panel();
+            BorrowersTabButton = new Button();
             TitleBar1.SuspendLayout();
             SlidingPanel.SuspendLayout();
             SuspendLayout();
@@ -129,7 +129,7 @@
             AboutTabButton.Font = new Font("Arial", 20.25F);
             AboutTabButton.Image = Properties.Resources.About;
             AboutTabButton.ImageAlign = ContentAlignment.MiddleLeft;
-            AboutTabButton.Location = new Point(-1, 355);
+            AboutTabButton.Location = new Point(0, 352);
             AboutTabButton.Name = "AboutTabButton";
             AboutTabButton.Size = new Size(300, 71);
             AboutTabButton.TabIndex = 7;
@@ -144,7 +144,7 @@
             SettingsTabButton.Font = new Font("Arial", 20.25F);
             SettingsTabButton.Image = Properties.Resources.Settings;
             SettingsTabButton.ImageAlign = ContentAlignment.MiddleLeft;
-            SettingsTabButton.Location = new Point(-1, 284);
+            SettingsTabButton.Location = new Point(0, 213);
             SettingsTabButton.Name = "SettingsTabButton";
             SettingsTabButton.Size = new Size(300, 71);
             SettingsTabButton.TabIndex = 6;
@@ -159,28 +159,13 @@
             TransactionTabButton.Font = new Font("Arial", 20.25F);
             TransactionTabButton.Image = Properties.Resources.Transactions;
             TransactionTabButton.ImageAlign = ContentAlignment.MiddleLeft;
-            TransactionTabButton.Location = new Point(-1, 213);
+            TransactionTabButton.Location = new Point(0, 142);
             TransactionTabButton.Name = "TransactionTabButton";
             TransactionTabButton.Size = new Size(300, 71);
             TransactionTabButton.TabIndex = 5;
             TransactionTabButton.Text = "TRANSACTION";
             TransactionTabButton.UseVisualStyleBackColor = false;
             TransactionTabButton.Click += TransactionsTabButton_Click;
-            // 
-            // BorrowersTabButton
-            // 
-            BorrowersTabButton.BackColor = Color.Transparent;
-            BorrowersTabButton.FlatStyle = FlatStyle.Flat;
-            BorrowersTabButton.Font = new Font("Arial", 20.25F);
-            BorrowersTabButton.Image = Properties.Resources.Borrowers;
-            BorrowersTabButton.ImageAlign = ContentAlignment.MiddleLeft;
-            BorrowersTabButton.Location = new Point(-1, 142);
-            BorrowersTabButton.Name = "BorrowersTabButton";
-            BorrowersTabButton.Size = new Size(300, 71);
-            BorrowersTabButton.TabIndex = 4;
-            BorrowersTabButton.Text = "BORROWERS";
-            BorrowersTabButton.UseVisualStyleBackColor = false;
-            BorrowersTabButton.Click += BorrowersTabButton_Click;
             // 
             // BooksTabButton
             // 
@@ -223,6 +208,21 @@
             ContentPannel.Size = new Size(903, 572);
             ContentPannel.TabIndex = 2;
             // 
+            // BorrowersTabButton
+            // 
+            BorrowersTabButton.BackColor = Color.Transparent;
+            BorrowersTabButton.FlatStyle = FlatStyle.Flat;
+            BorrowersTabButton.Font = new Font("Arial", 20.25F);
+            BorrowersTabButton.Image = Properties.Resources.Borrowers;
+            BorrowersTabButton.ImageAlign = ContentAlignment.MiddleLeft;
+            BorrowersTabButton.Location = new Point(-1, 284);
+            BorrowersTabButton.Name = "BorrowersTabButton";
+            BorrowersTabButton.Size = new Size(300, 71);
+            BorrowersTabButton.TabIndex = 4;
+            BorrowersTabButton.Text = "BORROWERS";
+            BorrowersTabButton.UseVisualStyleBackColor = false;
+            BorrowersTabButton.Click += BorrowersTabButton_Click;
+            // 
             // AppBody
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -254,8 +254,8 @@
         private Button AboutTabButton;
         private Button SettingsTabButton;
         private Button TransactionTabButton;
-        private Button BorrowersTabButton;
         private Button BooksTabButton;
         private Panel ContentPannel;
+        private Button BorrowersTabButton;
     }
 }
