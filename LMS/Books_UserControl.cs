@@ -43,7 +43,7 @@ namespace LMS
             cmd.Parameters.AddWithValue("@name", name_textbox.Text);
             cmd.Parameters.AddWithValue("@author", author_textbox.Text);
             cmd.Parameters.AddWithValue("@publisher", publisher_textbox.Text);
-            cmd.Parameters.AddWithValue("@did", bookId_textbox.Text);
+            cmd.Parameters.AddWithValue("@did", int.Parse(departmentno_textBox.Text));
 
             con.Open();
             try
@@ -92,7 +92,7 @@ namespace LMS
                 this.dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 this.dataGridView1.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 this.dataGridView1.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                 
+
             }
             catch (Exception ex)
             {
@@ -110,6 +110,11 @@ namespace LMS
         }
 
         private void searchbooks_button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

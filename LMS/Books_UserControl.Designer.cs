@@ -46,6 +46,8 @@
             isbn_textbox = new TextBox();
             label6 = new Label();
             dataGridView1 = new DataGridView();
+            departmentno_textBox = new TextBox();
+            label7 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -115,7 +117,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(254, 414);
+            label2.Location = new Point(92, 414);
             label2.Name = "label2";
             label2.Size = new Size(48, 15);
             label2.TabIndex = 8;
@@ -123,7 +125,7 @@
             // 
             // accno_textBox
             // 
-            accno_textBox.Location = new Point(336, 411);
+            accno_textBox.Location = new Point(174, 411);
             accno_textBox.Name = "accno_textBox";
             accno_textBox.Size = new Size(156, 21);
             accno_textBox.TabIndex = 9;
@@ -201,10 +203,29 @@
             dataGridView1.TabIndex = 18;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
+            // departmentno_textBox
+            // 
+            departmentno_textBox.Location = new Point(526, 411);
+            departmentno_textBox.Name = "departmentno_textBox";
+            departmentno_textBox.Size = new Size(156, 21);
+            departmentno_textBox.TabIndex = 20;
+            departmentno_textBox.TextChanged += textBox1_TextChanged;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(413, 414);
+            label7.Name = "label7";
+            label7.Size = new Size(94, 15);
+            label7.TabIndex = 19;
+            label7.Text = "Department No:";
+            // 
             // Books_UserControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(departmentno_textBox);
+            Controls.Add(label7);
             Controls.Add(dataGridView1);
             Controls.Add(author_textbox);
             Controls.Add(label5);
@@ -252,5 +273,7 @@
         private TextBox isbn_textbox;
         private Label label6;
         private DataGridView dataGridView1;
+        private TextBox departmentno_textBox;
+        private Label label7;
     }
 }
